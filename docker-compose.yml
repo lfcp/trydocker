@@ -1,0 +1,26 @@
+version: "3"
+
+networks:
+ techunit_employee_net:
+
+services:
+ database:
+  container_name: tu_db
+  image: lfcp91/techunit_employee_db
+  networks:
+   - techunit_employee_net
+  environment:
+   POSTGRES_DB: "techunit2"
+
+ application:
+  container_name: tu_app
+  image: lfcp91/techunit_employee
+  ports:
+   - "5000:8080"
+  networks:
+   - techunit_employee_net
+  links:
+   - database
+
+
+
