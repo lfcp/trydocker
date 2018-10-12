@@ -1,7 +1,7 @@
 # trydocker
 
 1. About
-Docker compose file that contains two images - one for a java web application and REST API running on a tomee-plus server; the other a postgres database for the java application.
+- Docker compose file that contains two images - one for a java web application and REST API running on a tomee-plus server; the other a postgres database for the java application.
 
 2. Usage
 - Make sure you have Docker-Compose installed first. 
